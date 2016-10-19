@@ -20,7 +20,7 @@ canvas.widt">
 基本用法如下：var canvas=document.getElementById(&amp;apos;canvas&amp;apos;)
 var context=canvas.getContext(&amp;apos;2d&amp;apos;);//取得绘图上下文
 canvas.widt">
-<meta property="og:updated_time" content="2016-10-19T10:37:39.063Z">
+<meta property="og:updated_time" content="2016-10-19T12:01:12.280Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="花西凉凉">
 <meta name="twitter:description" content="15.1 基本用法
@@ -267,21 +267,8 @@ context.fillStyle=&quot;#ccc&quot;;//填充颜色
   context.fillText(&apos;12&apos;,100,300)
 }
 </code></pre></li>
-<li><h3 id="寻找合适文字大小：measureText-“Hello-world-”-width"><a href="#寻找合适文字大小：measureText-“Hello-world-”-width" class="headerlink" title="寻找合适文字大小：measureText(“Hello world!”).width"></a>寻找合适文字大小：measureText(“Hello world!”).width</h3><pre><code> //在固定区域内，寻找合适的字体大小
-findSize();
-function findSize(){
-    var fontSize=100;//预先设定一个字体的大小
-    context.font=fontSize+&apos;px Arial&apos;;
-    //此时固定区域的长度为140px ,则一直缩小文字，直到文字长度&lt;=140,此时返回文字的height,即文字大小
-    while(context.measureText(&quot;Hello world!&quot;).width&gt;140){
-        fontSize--;
-        context.font=fontSize+&apos;px Arial&apos;;
-        console.log(fontSize)
-    }
-    context.fillText(&apos;Hello world!&apos;,800,10);
-    context.fillText(&apos;fonte size is&apos;+fontSize+&apos;px&apos;,800,50)
-}
-</code></pre></li>
+<li>### <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">寻找合适文字大小：measureText(<span class="string">"Hello world!"</span>).width</div><div class="line">         //在固定区域内，寻找合适的字体大小</div><div class="line">        findSize();</div><div class="line">        <span class="keyword">function</span> <span class="function"><span class="title">findSize</span></span>()&#123;</div><div class="line">            var fontSize=100;//预先设定一个字体的大小</div><div class="line">            context.font=fontSize+<span class="string">'px Arial'</span>;</div><div class="line">            //此时固定区域的长度为140px ,则一直缩小文字，直到文字长度&lt;=140,此时返回文字的height,即文字大小</div><div class="line">            <span class="keyword">while</span>(context.measureText(<span class="string">"Hello world!"</span>).width&gt;140)&#123;</div><div class="line">                fontSize--;</div><div class="line">                context.font=fontSize+<span class="string">'px Arial'</span>;</div><div class="line">                console.log(fontSize)</div><div class="line">            &#125;</div><div class="line">            context.fillText(<span class="string">'Hello world!'</span>,800,10);</div><div class="line">            context.fillText(<span class="string">'fonte size is'</span>+fontSize+<span class="string">'px'</span>,800,50)</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
+</li>
 </ul>
 <blockquote>
 <p>待续未完….</p>
